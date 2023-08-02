@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="http://127.0.0.1:8000/plug/">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id = 'name' name="name" required>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="genre">Write you favorite game genre:</label>
+        <input type="text" id="genre" name="genre">
+
+        <label for="favoriteGame">Your favorite game:</label>
+        <input type="text" id="favoriteGame" name="fgame" required>
+
+        <label for="numberOfHours">How much time have you spent playing this game </label>
+        <input type='number' id="numberOfHours" name="number_of_hours" required>
+
+         <label for="numberOfHoursPerDay">How much time do you devote to this game every day:</label>
+        <input type="number" id="numberOfHoursPerDay" name="number_of_hours_per_day" required>
+
+
+        <label for="firstExperiece">When was the first time you played this game</label>
+        <input type="date" id="firstExperiece" name="first_experience" required>
+
+        <label for="mcharacter">Your favorite male character in this game:</label>
+        <input type="text" id="mcharacter" name="m_character" required>
+
+        <label for="fcharacter">Your favorite female character in this game:</label>
+        <input type="text" id="fcharacter" name="f_character" required>
+
+        <label for="device">Which device do you usually use to play this game:</label>
+        <input type="text" id="device" name="device" required>
+         <button type="submit">Send</button>
+    </form>
+</body>
+</html>
